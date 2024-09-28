@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/css/style.css"
+      media="screen"
+    />
+    <script src="/assets/js/script.js" defer></script>
+    <link rel="shortcut icon" href="/assets/img/agenda-de-contato.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Minha agenda de contatos</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="/assets/img/agenda-de-contato.png"
+        alt="Ícone Agenda de Contato"
+      />
+      <h1>Minha agenda de contatos</h1>
+    </header>
+
+    <hr class="linha-1" />
+
+    <main>
+      <p>Adicionar novo contato</p>
+
+      <form id="formContato">
+        <input type="hidden" name="idContato" id="idContato" />
+
+        <div class="card-form">
+          <label>Nome:</label>
+          <input
+            placeholder="Digite o nome do contato"
+            type="text"
+            id="nome"
+            required
+          />
+        </div>
+
+        <div class="card-form">
+          <label>Telefone:</label>
+          <input
+            placeholder="Digite o telefone com DDD"
+            type="tel"
+            id="telefone"
+            required
+          />
+        </div>
+
+        <div class="card-form">
+          <label>E-mail:</label>
+          <input
+            placeholder="Digite o email do contato"
+            type="email"
+            id="email"
+            required
+          />
+        </div>
+
+        <button type="submit" id="cadastrar">Cadastrar</button>
+        <button type="button" id="cancelarEdit" class="hidden">Cancelar</button>
+      </form>
+
+      <hr />
+
+      <section class="tabela">
+        <p>Meus Contatos</p>
+
+        <div class="conteudo-tabela">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody id="listaContatos">
+              <!-- <tr>
+                <td>Joãozinho</td>
+                <td>912345678</td>
+                <td>
+                  <a href="mailto:joazinho@gmail.com">joazinho@gmail.com</a>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

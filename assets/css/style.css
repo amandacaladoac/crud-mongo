@@ -1,0 +1,150 @@
+body {
+  background-color: #ffffff;
+  margin: 2rem 0;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: #4678f3;
+}
+
+header {
+  max-width: 962px;
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+hr {
+  max-width: 1200px;
+  color: rgb(160 160 160);
+  border-top: 2px solid;
+  opacity: 1;
+}
+
+.linha-1 {
+  width: 50%;
+}
+
+main {
+  max-width: 962px;
+  margin: 0 auto;
+  width: 95%;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 0 1.5rem;
+}
+
+.card-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input {
+  padding: 10px 5px;
+  border: 1px solid rgb(160 160 160);
+  border-radius: 5px;
+}
+
+input:focus-visible {
+  outline: #4678f3 1px;
+}
+
+textarea {
+  padding: 2px 5px;
+  border: 1px solid rgb(160 160 160);
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px 10px;
+  background-color: #f0f0f0;
+  color: #4678f3;
+  border: 1px solid rgb(160 160 160);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  &:hover {
+    background-color: #4577f1;
+    color: #fff;
+    border: 1px solid #4577f1;
+    transition: all 0.4s ease;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+.conteudo-tabela {
+  overflow-x: auto;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid rgb(160 160 160);
+}
+
+td button {
+  margin: 0.3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (hover: none) {
+  button:hover {
+    background-color: initial;
+    color: inherit;
+    border: 1px solid rgb(160 160 160);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr 1fr);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr 1fr);
+  }
+  button {
+    grid-column: span 4;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  button {
+    grid-column: span 1;
+  }
+  button:hover {
+    background-color: none;
+    color: none;
+  }
+}
